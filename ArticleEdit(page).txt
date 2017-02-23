@@ -1,0 +1,835 @@
+<aspx:AspxPage runat="server" Id="MyNewPage" title="My New Page">
+<body>
+<!--<aspx:IncludeStyleSheet runat="server" url='<%# Url.Asset("Test/New node/PSssstStyle.css")%>'/>-->
+<aspx:IncludeStyleSheet runat="server" url='<%# Url.Asset("Test/New node/Article_Edit.css")%>'/>
+<aspx:IncludeStyleSheet runat="server" url='<%# Url.Asset("Test/ArticlePage.css")%>'/>
+<aspx:IncludeStyleSheet runat="server" url='<%# Url.Asset("Test/New node/Alert_Message_Box.css")%>'/>
+<aspx:IncludeStandardScript runat='server' ScriptType='REST' version='2.0' />
+
+<script src="/_assets/ckeditor/ckeditor.js?v=1"></script>
+    <link href="/_themes/custom/any/css/elements.css" type="text/css" rel="stylesheet">
+    <aspx:IncludeScript runat="server" url='<%# Url.Asset("Test/New node/CKEditor/config.js")%>'/>
+    <link rel="stylesheet" type="text/css" href="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/skins/moono/editor.css?t=G4CD">
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/ckstyles/styles-en.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/divarea/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/mvideo/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/videowidget/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/widget/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/imgupload/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/lineutils/plugin.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/widget/lang/en.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/imgupload/lang/en.js?t=G4CD"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/lang/en.js?t=G4CD"></script>
+    
+    <script src="/_assets/scripts/fileuploader/jquery.fine-uploader.min.js"></script>
+    <link href="/_assets/scripts/fileuploader/fine-uploader-new.min.css" type="text/css" rel="stylesheet">
+    <link href="/_assets/scripts/fileUploader/fine-uploader-new.min.css?v=636082848000000000" type="text/css" rel="stylesheet">
+    <script src="/_assets/scripts/fileUploader/jquery.fine-uploader.js?v=636082848000000000" type="text/javascript"></script>
+    <script src="/_assets/scripts/tipped/imagesloaded.pkgd.min.js?v=636082848000000000" type="text/javascript"></script>
+    <link href="/_assets/scripts/tipped/tipped.css?v=636082848000000000" type="text/css" rel="stylesheet">
+    <link href="/_assets/css/social.css?v=636082848000000000" type="text/css" rel="stylesheet">
+    <script src="/bundles/mention?v=KLyMSvGFZe0-ZZmSqSg9r6v8iVbL47t6eosliM-w0es1" type="text/javascript"></script>
+    <script src="/_assets/scripts/tipped/tipped.js?v=636082848000000000" type="text/javascript"></script>
+    
+    <link href="/_assets/bundles/core?v=h_p1umkfxwAU22DXQMwet8YwjyUOiE7VzZMOFhAlOxg1" rel="stylesheet">
+    <link href="/_assets/bundles/global?v=mUmDptlZ263Hk1G-rsUl_2jOidT5mrClfYX8tk3DKGA1" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/skins/moono/dialog.css?t=G4CD">
+    <link rel="stylesheet" type="text/css" href="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/css/codemirror.min.css">
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/js/codemirror.min.js"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/js/codemirror.addons.min.js"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/js/codemirror.mode.htmlmixed.min.js"></script>
+    <script type="text/javascript" src="https://opensymmetrytest.magentrixcloud.com/_assets/ckeditor/plugins/codemirror/js/codemirror.addons.search.min.js"></script>
+
+
+
+
+<p id="C_V"></p>
+ <div class="Descr">
+    
+            <div class="div-Profile">
+            <br>
+            <span class="Page-Title" style="color:white; font-size:20px; display:block;margin-top:7px">Artilce Edit </span><br>
+            <span class="user-name2">
+            This is a list of sections of the Article<br/>
+            Click to view the section
+            </span>
+            </div>
+            
+            <div class="Save">
+            <div class="btn-Box">
+            <br>
+            <span class="button-text_s" id="Save">Save</span>
+            </div>
+            </div>
+            <div class="Add_Section">
+                <div class="btn-Box">
+                <br>
+                <span class="button-text_as" id="Section">+ Add Section</span>
+                </div>
+            </div>
+            
+            <div class="View_Article">
+            <div class="btn-Box">
+            <br>
+            <span class="button-text_va" id="View_Article" >View Articles</span><br>
+            </div>
+            </div>
+            
+            <div class="Preview">
+                <div class="btn-Box">
+                <br>
+                <span class="button-text_p" id="Preview">Preview</span>
+                </div>
+            </div>
+            
+            <div class="extra">
+            </div>
+            
+</div>
+<div style="display:flex; margin-top: 10px;">
+<div class="OSKB">
+   
+    <span id="Title_ID" style="font-weight:bold; font-size:25px; color:#f6874e; margin-left:30px"></span>
+    <br>
+    <span id="Section_ID" style="font-weight:bold; font-size:20px; color:#f6874e"></span>
+    <ul class="PSssstlist noBullet"></ul>
+    
+    
+</div>
+<div class="filter">
+    <h4>Article Settings</h4>
+    <ul class="ul-filter">
+        <li class="li-filter">
+            <div class="Filter-Properties">
+            <span class="Setting_title">Status</span>
+            </div>
+            
+            <div class = "Author">
+                <span class="Setting_title">Author</span>
+                <form id="live-search" action="" class="styled" method="post">
+                        <input list="User" name="User" id="filter" class="textbox" placeholder="Enter Author Name">
+                            <!--******* asp datalist tag to search for username as Author *******-->
+                        <datalist id="User">
+                        </datalist>
+                </form>
+            </div>
+            
+            <div class="Category">
+            <span class="Setting_title">Category</span>
+            <form>
+                <select class="textbox2" id="Category_selector">
+                <option>Select Category</option>
+                </select>
+            </form>
+            </div>
+            
+            <div class="Article_type">
+            <span class="Setting_title">Article Type</span>
+            <form>
+                <select class="textbox2" id="Blog_selector">
+                <option>Select Article Type</option>
+                </select>
+            </form>
+            </div>
+            
+            <div class="CreatedBy">
+                <span class="Setting_title">CreatedBy</span>
+                
+            </div>
+            
+        </li>
+    </ul>
+</div>
+</div>
+
+    <div class="alert-box error"><span>error: </span>Write your error message here.</div>
+	<div class="alert-box success"><span>success: </span>Article has been saved successfully.</div>
+	<div class="alert-box warning"><span>warning: </span>Write your warning message here.</div>
+	<div class="alert-box notice"><span>notice: </span>Write your notice message here.</div>
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h3>New Section</h3>
+      <br>
+    </div>
+    <div class="Section-body">
+      
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn" id="Section_Save" value="Submit">Save</button>
+      <button type="button" class="btn" id="Section_Cancel" value="Submit">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+<div id="Preview-Modal" class="P-modal">
+
+  <!-- Modal content -->
+  <div class="P-modal-content">
+    <div class="P-modal-header">
+      <span class="P-close">×</span>
+      <h3>Preview</h3>
+      <br>
+    </div>
+    <div class="P-Section-body">
+      
+    </div>
+    <div class="P-modal-footer">
+    </div>
+  </div>
+
+</div>
+
+<!--REMOVE THIS-->
+<script type="text/javascript">
+var PSssstEntry_id = '<%=Request["id"]%>';
+$(document).ready(function(){
+    var Sec_no = 0;
+    var i= 0;
+    var Article_ID = "";
+    var Edit_Article_ID = "";
+    var New_Article_ID = "";
+    var New_Unique_ID = "";
+    var A_Section_List = "/acls/Article/Article_Section";
+    var Article_list = "/acls/Article/Article_Info";
+    var A_Title = "";
+    
+    $.getJSON(Article_list).done(function(Article_Data) {
+    $.getJSON(A_Section_List).done(function(A_Section_Data) {
+        // When new article is created
+        //if($.cookie("New_Article_ID") != null) {
+            Article_ID = $.cookie("Article_ID");    // Entity_Relation ID
+            New_Article_ID = $.cookie("N_Article_ID"); // Article ID
+            console.log(New_Unique_ID);
+            console.log(New_Article_ID);
+            
+            
+            
+       // }
+        // When existing article is edited
+        //if($.cookie("Article_ID") != null) {
+        //Edit_Article_ID = $.cookie("Article_ID");
+       
+        //Article_ID = (Edit_Article_ID != null ? Edit_Article_ID : New_Unique_ID)
+            
+            console.log("Cookie : "+Article_ID);
+            
+        $.each(Article_Data,function(key,A_item) {
+            if(Article_ID == A_item.Entity_relation_Id) {
+                A_Title = A_item.Name;
+                $("#Title_ID").html(A_Title);
+            }
+        }); // Article_Data each loop
+        $.each(A_Section_Data,function(key,S_item) {
+            if(Article_ID == S_item.Article_Id) {
+                
+                Sec_no ++;
+                i = Sec_no;
+                var regex = /(<([^>]+)>)/ig;
+                var body = S_item.Section_Title;
+                var Title = body.replace(regex, "");
+                
+                $("div.OSKB>ul.PSssstlist.noBullet").append(
+                            "<li id='"+ S_item.Section_No + " " + S_item.ID +"' class='" + ((PSssstEntry_id && S_item.Section_No == PSssstEntry_id) ? "Open noPointer" : "Closed") + " " + S_item.Section_No +" "+"OLD_"+Sec_no+ "'>"
+                            +"<h3 " + ((PSssstEntry_id && S_item.Section_No == PSssstEntry_id) ? "class='noPointer'" : "") + ">" 
+                            + Title
+                            + "</h3><span class=\"handle\"></span>"
+
+                            + "<div class=\"S_list\">"
+                            +'<div class=\"E_div\"><asp:Image class="IMG_Edit" runat="server" imageUrl='<%# Url.Asset("Test/New node/edit_property-.png")%>'/></div>'
+                            +'<div class=\"S_div\"><asp:Image class="IMG_Save" runat="server" imageUrl='<%# Url.Asset("Test/New node/Save.png")%>'/></div>'
+                            +"<span class=\"body-"+S_item.Section_No+"\">"
+                            + S_item.Section_Body
+                            +"</span>"
+                            +"</div></li>");
+            }
+        }); // Section_Data each loop
+       // } // if(cookie != null)
+    
+    if($("ul.PSssstlist.noBullet>li").length<=0){
+        console.log("Hello");
+        New_Section();
+    }
+    
+//});// A_Section_Data JSON
+//});// Article_Data JSON
+
+    //******* Populate Edit Properties fields of Article Edit page *****//
+    var UserList_Json = "/acls/Demo_Artical_Page/UserList";
+    var blog_category = "/acls/Demo_Artical_Page/BlogInfo";  
+    var article_category = "/acls/Demo_Artical_Page/Article_Category";
+    var Blog_Category = [];         //*** Array to hold Blog category *** 
+    var Article_Category = [];      //*** Array to hold Article Caregory ***    
+    var User_List_Array = [];       //*** Array to hold UserName  ***
+    $.each(Article_Data,function(key,Settings_item){
+    var Author = "";
+    
+    if( Article_ID == Settings_item.Entity_relation_Id ){
+        
+        $('.li-filter>div.Filter-Properties').append("<span class='setting'>" + Settings_item.Status + "</span>");
+       
+        Author = Settings_item.Author_Name;
+       
+        $('.li-filter>div.CreatedBy').append('<img src=\'/userprofile/img/' +Settings_item.Author_ID + '\' class="profile-photo" width="16" align="absmiddle" height="16" style="margin-right:3px;margin-left:30px;vertical-align:center;">');
+        $('.li-filter>div.CreatedBy').append("<span class='setting'>"+Author+"</span><br>");
+        $('.li-filter>div.CreatedBy').append("<span class='setting' style='margin-left:30px'>"+Settings_item.Publish_Date+"</span>");
+        
+        $.getJSON(blog_category).done(function(BlogData) {
+        $.getJSON(article_category).done(function(categoryData) {
+                        
+            $.each(BlogData,function(key1,item1) {
+                Blog_Category.push(item1.BlogName + "|" + item1.Id);                //***** push all "BlogName|BlogId" onto array*****
+            });
+                        
+            $.each(categoryData,function(key2,item2) {
+                Article_Category.push(item2.Name + "|" + item2.Id);                 //****** push all "CategoryName|CategoryId" onto array*****
+            });
+                    
+            var select_items = "";
+            var select_category = "";
+            var arrayLength = Blog_Category.length;
+            var arry_Category_length = Article_Category.length;
+                        
+            for (var i = 0; i < arrayLength; i++) {
+                var name_only = Blog_Category[i].split("|")[0];                     //******* get just the part before the "|" *****
+                select_items += "<option value=\"" + Blog_Category[i] + "\">" +  name_only + "</option>";
+                            
+            }
+                        
+            for(var i= 0; i<arry_Category_length; i++) {
+                var name_only = Article_Category[i].split("|")[0];                  //******* get just the part before the "|" *****
+                select_category += "<option value=\"" + Article_Category[i] + "\">" +  name_only + "</option>";
+            }
+                        
+            $("select#Blog_selector").html(select_items);
+            $("select#Category_selector").html(select_category);
+        });
+        });
+        
+        $.getJSON(UserList_Json).done(function(UserData) {
+                        
+            $.each(UserData,function(key1,item1) {
+                User_List_Array.push(item1.Name + "|" + item1.Id);                   //***** push all "UserName|UserId" onto array*****
+            });
+                        
+            var select_User = "";
+            var User_array_length = User_List_Array.length;
+             
+            $('input#filter').val(Author);            
+            for(var i=0; i<User_array_length; i++) {
+                var name_only = User_List_Array[i].split("|")[0];                   //***** get just the part before the "|" ******
+                select_User += "<option value=\"" +  name_only + "\" data-User=\""+User_List_Array[i]+"\"></option>";
+            }
+                        
+            $("datalist#User").html(select_User);
+            
+        });
+    }
+    });
+
+    $(document).on("click","#View_Article",function() {
+        var Total_Li_Elements = $("ul.PSssstlist.noBullet>li").length;
+                
+                var test = $("ul.PSssstlist.noBullet>li:first-child").html();
+                window.location.href = "https://opensymmetrytest.magentrixcloud.com/aspx/Article_List";
+                
+                var i = 0;
+                $("ul.PSssstlist.noBullet>li").each(function(index,E_item){
+                    
+                    var val = E_item.id;
+                    i++;
+                    var ID = val.substr(val.indexOf(" ") + 1);
+                    var S_No = val.split(" ")[0];
+                    if($(this).hasClass("OLD_"+i)) {
+                    }
+                    
+                });
+    });
+    
+    // OnClick preview popup window to preview the article 
+    $(document).on("click","#Preview",function() {
+        
+        // Get the modal
+    var modal = document.getElementById('Preview-Modal');
+
+// Get the Save button that opens the modal
+    //var Save_btn = document.getElementById("Section_Save");
+    
+// Get the Cancel button that opens the modal
+    //var Cancel_btn = document.getElementById("Section_Cancel");
+    
+// Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("P-close")[0];
+    modal.style.display = "block";
+    var P_Section_Body = "";
+    var P_S_Title = "";
+    var P_Article_Body = "";
+    var P_Section = "";
+    var S_No = "";
+    var Article_Title = document.getElementById('Title_ID').value;
+    console.log("Title : "+Article_Title);
+    $("div.P-modal-content>div.P-modal-header").append("<h2 class=\"Demo-Title\">"+A_Title+"</h2>");
+    $("ul.PSssstlist.noBullet>li").each(function(index,E_item){
+        S_No = index + 1;
+        P_Section_Body = $(this).find("span.body-"+S_No).html();
+        console.log("Body : "+P_Section_Body);
+        console.log("Section No : "+(index+1));
+                    
+        var P_Section_Title = $(this).find("h3").text();
+        P_S_Title = "<h3>"+P_Section_Title+"</h3>"
+        P_Section = P_S_Title+"\n" + P_Section_Body+ "\n";                                                        
+        P_Article_Body = P_Article_Body + P_Section;
+        
+    });
+    
+    $(".P-Section-body").append("<div class='Demo-Body'>"+P_Article_Body+"</div>");
+    
+    span.onclick = function(){
+        modal.style.display = "none";
+        $('div.P-modal>div.P-modal-content>div.P-Section-body>div.Demo-Body').remove();
+        $('div.P-modal>div.P-modal-content>div.P-modal-header>h2.Demo-Title').remove();
+    }
+    
+        
+    });
+
+    // On click save button saves all the section in the section entity and article post entity // 
+    $(document).on("click","#Save",function() {
+        $.getJSON(A_Section_List).done(function(A_Section_Data){
+        $.getJSON(Article_list).done(function(Article_Data){
+            
+            var section = "";
+            var Article_Body = "";
+            var Done_Saving = false;
+            
+            $.each(A_Section_Data,function(key,item) {
+                $("ul.PSssstlist.noBullet>li").each(function(index,E_item){
+                    
+                    var Total_Li_Elements = $("ul.PSssstlist.noBullet>li").length;
+                    var S_Body = "";
+                    var S_Title = "";
+                    var val = E_item.id;
+                    var ID = val.substr(val.indexOf(" ") + 1);
+                    var S_No = val.split(" ")[0];
+                    
+                    
+                    
+                    
+                    if(Article_ID == item.Article_Id && ID == item.ID && S_No == item.Section_No) {
+                    
+                    console.log("ID : "+ID);
+                    console.log("Section No : "+S_No);
+                    console.log("Inside upsert if condition");
+                    S_Body = $(this).find("span.body-"+S_No).html();
+                    var Title = $(this).find("h3").text();
+                    S_Title = "<h3>"+Title+"</h3>"
+                    
+                    console.log("Body : "+S_Body);
+                    
+                    REST.upsert({ 
+                        objectType: 'Article_Sub_Section__c', 
+                        data: {Section_Body__c : S_Body,
+                        SectionNumber__c :(index+1) ,
+                        Name : S_Title,
+                        Article_ID__c : Article_ID,
+                        Id : ID},
+                        externalId: 'Id', 
+                        callback: function(context) { 
+                            if (REST2.isSuccess(context)) {
+                                
+                            // display message on updating the article....
+                        }
+                        }
+                    });
+                    
+                    } else if($(this).hasClass("NEW_"+S_No)) {
+                        console.log("Not there in the article entity");
+                        S_Body = $(this).find("span.body-"+S_No).html();
+                        var Title = $(this).find("h3").text();
+                        console.log("Title : "+Title);
+                        S_Title = "<h3>"+Title+"</h3>"
+                      
+                    $(this).addClass("OLD_"+S_No).removeClass("NEW_"+S_No);
+                    console.log("Class changed");
+                        REST.create({ 
+                        objectType: 'Article_Sub_Section__c', 
+                        data: {Section_Body__c : S_Body,
+                        SectionNumber__c :E_item.id ,
+                        Name : S_Title,
+                        Article_ID__c : Article_ID},
+                        callback: function(context) { 
+                            if (REST2.isSuccess(context)) {
+                                 var newId = context.Id;
+                            //do something....
+                        }
+                        }
+                    });
+                        
+                    }
+                
+                    else if( index+1 == Total_Li_Elements) {
+                        Done_Saving = true;
+                        console.log("True");
+                }    
+                    
+                }); // each li elements
+                
+            });
+            
+            if(Done_Saving == true) {
+            console.log("Save to article post");
+            $("ul.PSssstlist.noBullet>li").each(function(index,E_item){
+                    
+                    console.log("before saving to article ppost");
+                    var val = E_item.id;
+                    var S_No = val.split(" ")[0];
+                    
+                    Section_Body = $(this).find("span.body-"+S_No).html();
+                    var Section_Title = $(this).find('h3').text();
+                    S_Title = "<h3>"+Section_Title+"</h3>"
+                    
+                    console.log("Section Title : "+Section_Title);
+                    console.log("Section_Body : "+Section_Body);
+                    
+                    section = S_Title+"\n" + Section_Body+ "\n";                                                        
+                    Article_Body = Article_Body + section;
+            });
+                    console.log("saving to article post");
+                    $.each(Article_Data,function(key,A_item){
+                        if(A_item.Entity_relation_Id == Article_ID ) {
+                            var ID = A_item.Article_Id;
+                            console.log("-=-=-=-ID-=-=-="+ID);
+                            console.log("-=[ARTICLE]=-"+Article_Body);
+                            var Total_Li_Elements = $("ul.PSssstlist.noBullet>li").length;
+                            console.log("Till here");
+                            REST.edit({ 
+                                objectType: 'ArticlePost__c', 
+                                data: {Body__c : Article_Body,
+                                SectionCount__c : Total_Li_Elements,
+                                Id : ID,
+                                Entity_Relation_Id__c : Article_ID },
+                                callback: function(context) { 
+                                    if (REST2.isSuccess(context)) {
+                                        console.log("Show Element");
+                                        
+                                        //*** Alert message banner ***//
+                                        $('.success').show();
+                                        $('.success').html("Article has been saved successfully");
+                                        console.log("Hide");
+                                        $(".success").delay(4000).hide('fade',{},500);
+                                        
+                                        $('.success').show();
+        
+        $(".success").delay(4000).hide('fade',{},500);
+                                        
+                                        
+                                    //location.reload();
+                                }
+                                }
+                            });
+                        }
+            
+            });
+            }
+            
+        });
+        });
+    });
+    
+   
+    $(document).on("click", "ul.PSssstlist.noBullet>li>h3", function () {
+        /*When we click on a question (h3) */
+    
+        /*For the Widget, we don't want it to slide*/
+	    if($(this).parent().hasClass("noPointer")) {
+            return false;
+	    }
+	
+    /*If you click on one, and another one is open */
+	if($(this).parent().siblings().hasClass("Open")) {
+        $("li.Open > div").slideUp(250, function() {
+            $(this).parent().addClass("Closed").removeClass("Open");
+        });
+        $(this).parent().addClass("Open"); /*This part runs before line 5, for some reason, maybe because of the callback?*/
+        $(this).parent().removeClass("Closed").children("div").slideDown(250);
+
+	}
+
+    /*If you click on one, and it is open */
+	else if($(this).parent().hasClass("Open")) {
+		$("li.Open > div").slideUp(250, function() {
+            $("li.Open").removeClass("Open");
+        });
+		$(this).parent().addClass("Closed");
+	}
+	
+	/*If you click on one, and no other one is open */
+    else { 
+        $(this).parent().addClass("Open", function() {
+            $(this).children("div").slideDown(250);   
+            $(this).removeClass("Closed"); /*Maybe find a way to compress this too?*/
+            console.log("Opened");
+        });
+	}
+});
+    //***** On click Edit icon replace the field to CKEditor  *****/
+    $(document).on("click", "ul.PSssstlist.noBullet>li>div.S_list>div.E_div", function() {
+        var i = $(this).closest('li').attr('id');
+        var ID = i.split(" ")[0];
+        console.log("ID : "+ID);
+        var parent_node = $(this).closest('div.S_list');
+        var  body_text = parent_node.children('span.body-'+ID).html();
+        console.log("Value : "+body_text);
+        var txt_area = document.createElement("TEXTAREA");
+        var txt = document.createTextNode(body_text);
+        txt_area.appendChild(txt);
+        txt_area.setAttribute('id','txt-'+ID);
+        txt_area.setAttribute('class','Txt_AreaClass');
+        $('.body-'+ID).replaceWith(txt_area);
+        CKEDITOR.replace( 'txt-'+ID,
+                 {
+        toolbar :
+        [
+        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat', 'Format', 'Font', 'FontSize', 'Styles'] },
+        { name: 'colors', items: ['TextColor', 'BGColor'] },
+        { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align'], items: ['NumberedList', 'BulletedList', 'Blockquote', '-', 'Outdent', 'Indent', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+        { name: 'pasting', items: ['PasteText', 'PasteFromWord', 'Paste'] },
+        { name: 'insert2', items: ['Link', 'Unlink', 'imgupload', 'mvideo', 'Table', 'Flash', 'Iframe', 'HorizontalRule'] },
+        { name: 'document', items: ['Templates', 'Find', 'Replace', '-', 'Source'] },
+        ],
+        resize_enabled : false
+        });
+    });
+    
+    //****** on click save icon convert ckeditor back to span element with saved text ******//
+    $(document).on("click","ul.PSssstlist.noBullet>li>div.S_list>div.S_div", function() {
+        var i = $(this).closest('li').attr('id');
+        var ID = i.split(" ")[0];
+        var parent_node = $(this).closest('div.S_list');
+        var title_txt = parent_node.children('.Sub_Section').val();
+        if($(this).closest('div.S_list').children(".Sub_Section")) {
+            $(this).closest('li').children('h3').html(title_txt);
+            $(".Sub_Section").remove();
+            
+        }
+        var body_text = CKEDITOR.instances['txt-'+ID].getData();
+        var editor = CKEDITOR.instances['txt-'+ID];
+        CKEDITOR.instances['txt-'+ID].destroy(true);
+        $("#txt-"+ID).replaceWith("<span class=\"body-"+ID+"\">"+body_text+"</span>");
+    });
+    
+    $(document).on("click","#Section",function() {
+        New_Section();  //*** Pop up to add new section ***//
+    });
+   
+    
+// sortable function to drag and change elements position
+$("ul.PSssstlist.noBullet>li").each(function(i) {
+  var item = $(this);
+  var item_clone = item.clone();
+  item.data("clone", item_clone);
+  var position = item.position();
+  item_clone
+  .css({
+    left: position.left,
+    top: position.top,
+    visibility: "hidden"
+  })
+    .attr("data-pos", i+1);
+  
+  $("#cloned-slides").append(item_clone);
+});
+
+$("ul.PSssstlist.noBullet").sortable({
+  
+  axis: "y",
+  revert: true,
+  handle:".handle",
+  scroll: false,
+  placeholder: "sortable-placeholder",
+  cursor: "move",
+
+  start: function(e, ui) {
+    ui.helper.addClass("exclude-me");
+    $(".all-slides .slide:not(.exclude-me)")
+      .css("visibility", "hidden");
+    ui.helper.data("clone").hide();
+    $(".cloned-slides ul.PSssstlist.noBullet>li").css("visibility", "visible");
+  },
+
+  stop: function(e, ui) {
+    $("ul.PSssstlist.noBullet ul.PSssstlist.noBullet>li.exclude-me").each(function() {
+      var item = $(this);
+      var clone = item.data("clone");
+      var position = item.position();
+
+      clone.css("left", position.left);
+      clone.css("top", position.top);
+      clone.show();
+
+      item.removeClass("exclude-me");
+    });
+    
+    $(".all-slides .slide").each(function() {
+      var item = $(this);
+      var clone = item.data("clone");
+      
+      clone.attr("data-pos", item.index());
+    });
+
+    $("ul.PSssstlist.noBullet ul.PSssstlist.noBullet>li").css("visibility", "visible");
+    $(".cloned-slides ul.PSssstlist.noBullet>li").css("visibility", "hidden");
+  },
+
+  change: function(e, ui) {
+    $(".all-slides .slide:not(.exclude-me)").each(function() {
+      var item = $(this);
+      var clone = item.data("clone");
+      clone.stop(true, false);
+      var position = item.position();
+      clone.animate({
+        left: position.left,
+        top: position.top
+      }, 200);
+    });
+  }
+  
+});
+    
+});// A_Section_Data JSON
+});// Article_Data JSON
+    
+
+
+// New Section Function
+function New_Section(){
+     i++;
+       // Get the modal
+    var modal = document.getElementById('myModal');
+
+// Get the Save button that opens the modal
+    var Save_btn = document.getElementById("Section_Save");
+    
+// Get the Cancel button that opens the modal
+    var Cancel_btn = document.getElementById("Section_Cancel");
+    
+// Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+//Add section title input field to the modal
+$(".modal-header").append('<asp:TextBox class="Sub_Section" placeholder="Section Title" width="98%" style="margin-bottom:10px; margin-right:10px; color:black;  margin-left:10px;  padding-left:5px;  padding-top:5px; padding-bottom:7px; border-radius:5px;" runat="server" />');
+
+// add CKEditor to the modal 
+$(".Section-body").append("<textarea name=\"editor\" id=\"txt-"+i+"\" rows=\"10\" cols=\"80\"></textarea>");
+CKEDITOR.replace( 'txt-'+i,
+                 {
+        toolbar :
+        [
+        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat', 'Format', 'Font', 'FontSize', 'Styles'] },
+        { name: 'colors', items: ['TextColor', 'BGColor'] },
+        { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align'], items: ['NumberedList', 'BulletedList', 'Blockquote', '-', 'Outdent', 'Indent', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+        { name: 'pasting', items: ['PasteText', 'PasteFromWord', 'Paste'] },
+        { name: 'insert2', items: ['Link', 'Unlink', 'imgupload', 'mvideo', 'Table', 'Flash', 'Iframe', 'HorizontalRule'] },
+        { name: 'document', items: ['Templates', 'Find', 'Replace', '-', 'Source'] },
+        ],
+        resize_enabled : false
+        });
+
+// When the user clicks the button, open the modal
+   // btn.onclick = function() {
+    modal.style.display = "block";
+//} 
+      span.onclick = function() {
+          CKEDITOR.instances['txt-'+i].destroy(true);
+ $('div.modal>div.modal-content>div.modal-header>.Sub_Section').remove();
+        $('div.modal>div.modal-content>div.Section-body>#txt-'+i).remove();
+    modal.style.display = "none";
+}
+
+// on clicking outside the modalbox close the model 
+/*window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}*/
+       
+    Save_btn.onclick= function() {
+        
+        var title_txt = $('div.modal>div.modal-content>div.modal-header>.Sub_Section').val();
+        console.log("Title Text : "+title_txt);
+       
+        var body_text = CKEDITOR.instances['txt-'+i].getData();
+        console.log("Body Text : "+body_text);
+        var editor = CKEDITOR.instances['txt-'+i];
+        CKEDITOR.instances['txt-'+i].destroy(true);
+        
+        $('div.modal>div.modal-content>div.modal-header>.Sub_Section').remove();
+        $('div.modal>div.modal-content>div.Section-body>#txt-'+i).remove();
+        // close the popup modal
+        modal.style.display = "none";
+    
+        console.log("Section No ID : "+ i);
+        $("div.OSKB>ul.PSssstlist.noBullet").append(
+        "<li id='"+ i +"' class='" + ((PSssstEntry_id && i == PSssstEntry_id) ? "Open noPointer" : "Closed") + " " + i +" "+"NEW_"+i+ "'>"
+        +"<h3 " + ((PSssstEntry_id && i == PSssstEntry_id) ? "class='noPointer'" : "") + ">" 
+        + title_txt
+        + "</h3><span class=\"handle\"></span>"
+        
+        + "<div class=\"S_list\">"
+        +'<div class=\"E_div\"><asp:Image class="IMG_Edit" runat="server" imageUrl='<%# Url.Asset("Test/New node/edit_property-.png")%>'/></div>'
+        +'<div class=\"S_div\"><asp:Image class="IMG_Save" runat="server" imageUrl='<%# Url.Asset("Test/New node/Save.png")%>'/></div>'
+        +"<span class=\"body-"+i+"\">"
+        + body_text
+        +"</span>"
+        +"</div></li>"
+        );
+        
+        $('.success').show();
+        $('.success').text("New Section is added to the article");
+        $(".success").delay(4000).hide('fade',{},500);
+             
+             var len = $("ul.PSssstlist.noBullet>li").length;
+             console.log("Length Of Li : "+len);
+            var item = $('li#'+i);
+            var item_clone = item.clone();
+            item.data("clone", item_clone);
+            var position = item.position();
+            item_clone
+            .css({
+            left: position.left,
+            top: position.top,
+            visibility: "hidden"
+            })
+            .attr("data-pos", len);
+            $("#cloned-slides").append(item_clone);  
+            
+             
+    }
+    
+    Cancel_btn.onclick= function() {
+        //$('.warning').show();
+        var Action = confirm("Are you sure you want to cancel");
+        if(Action == true) {
+            location.reload();
+        }
+        if(Action == false) {
+         // do nothing   
+        }
+    }
+}
+
+}); // document.ready function
+</script>
+<style>
+.Txt_AreaClass {
+    margin-top:50px;
+}
+</style>
+</body>
+
+</aspx:AspxPage>
